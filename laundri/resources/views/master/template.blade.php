@@ -21,11 +21,11 @@
 
 <body>
   <!-- Sidenav -->
- @include('side')
+ @include('component.side')
   <!-- Main content -->
   <div class="main-content" id="panel">
     <!-- Topnav -->
-    @include('nav')
+    @include('component.nav')
     <!-- Header -->
     <!-- Header -->
     <div class="header bg-primary pb-6">
