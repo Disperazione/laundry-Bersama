@@ -29,7 +29,7 @@ class CreateTransaksiTable extends Migration
             $table->enum('baru',['proses','selesai','diambil']);
             $table->enum('dibayar',['dibayar','belum_dibayar']);
             $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('users')->nullable();
             $table->timestamps();
         });
     }

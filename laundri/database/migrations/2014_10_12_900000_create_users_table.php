@@ -20,8 +20,7 @@ class CreateUsersTable extends Migration
             $table->text('password');
             $table->enum('role',['admin','kasir','owner']);
             $table->unsignedBigInteger('id_outlet');
-            $table->foreign('id_outlet')->references('id')->on('outlet');
-            $table->rememberToken();
+            $table->foreign('id_outlet')->nullable()->references('id')->on('outlet')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

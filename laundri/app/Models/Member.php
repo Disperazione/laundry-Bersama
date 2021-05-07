@@ -9,10 +9,12 @@ class Member extends Model
 {
     use HasFactory;
     protected $table = 'member';
-    protected $fillable = ['nama','alamat','jenis_kelamin','telp'];
+    protected $fillable = [
+        'nama', 'alamat', 'jenis_kelamin', 'tlp'
+    ];
 
-    public function transaksi( )
+    public function transaksi()
     {
-        return $this->belongsTo(Transaksi::class,'id');
+        return $this->hasMany(Transaksi::class, 'id_member','id');
     }
 }

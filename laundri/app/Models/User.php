@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,18 +9,15 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    protected $table = 'users';
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'nama', 'username', 'role', 'id_outlet',
     ];
-
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -40,4 +36,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    protected $dates = [
+        'last_login_at', 'created_at', 'updated_at'
+    ];
+
+    public function transaksi()
+    {
+        return $this->hasMany(Transaksi::class, 'id_user', 'id');
+    }
+    public function outlet()
+    {
+        return $this->belongsTo(Outlet::class, 'id_outlet');
+    }
 }
