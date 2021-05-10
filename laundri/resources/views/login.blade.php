@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>Login</title>
   <!-- Favicon -->
-  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <link rel="icon" href="{{asset('img/brand/favicon.png')}}" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
   <link rel="stylesheet" href="{{asset('vendor/nucleo/css/nucleo.css')}}" type="text/css">
-  <link rel="stylesheet" href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="{{asset('vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" type="text/css">
   <!-- Argon CSS -->
-  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+  <link rel="stylesheet" href="{{asset('css/argon.css?v=1.2.0')}}" type="text/css">
 </head>
 
 <body class="bg-default">
@@ -50,7 +50,7 @@
 
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
-                <small>Or sign up with credentials</small>
+                <small></small>
               </div>
               <form class="mx-auto text-center" method="POST" action="/postlogin">
                 @csrf
@@ -65,14 +65,14 @@
                         </g>
                     </svg>
                 </a>
-                <h1 class="h6 mb-3">Sign in</h1>
+                <h1 class="h6 mb-3">LOGIN</h1>
                 <div class="d-flex flex-column mb-3 text-danger">
                     <span>@error('username') {{ $message }} @enderror</span>
                     <span>@error('password') {{ $message }} @enderror</span>
                 </div>
 
                 <div class="form-group">
-                    <label for=" inputEmail" class="sr-only">Email or Username</label>
+                    <label for=" inputEmail" class="sr-only"> Username</label>
                     <input type="text" id="inputEmail" class="form-control form-control-lg"
                         placeholder="Email or Username" name="username" required="" autofocus=""
                         value="{{ old('username') }}">
@@ -87,7 +87,7 @@
                         <input type="checkbox" name="remember" id="remember"> Stay logged in
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Let me in</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">LOGIN</button>
             </form>
             </div>
           </div>
