@@ -27,6 +27,7 @@ Route::middleware(['web', 'auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [ViewAdminController::class, 'dashboard'])->name('dashboard.admin');
     Route::get('/admin/outlet', [ViewAdminController::class, 'outlet'])->name('outlet.admin');
     Route::get('/admin/paket', [ViewAdminController::class, 'paket'])->name('paket.admin');
+    Route::get('/admin/coba', [ViewAdminController::class, 'coba1'])->name('coba1.admin');
 });
 Route::middleware(['web', 'auth', 'role:kasir'])->group(function () {
     Route::get('/kasir/dashboard', [ViewKasirController::class, 'index'])->name('index.kasir');
