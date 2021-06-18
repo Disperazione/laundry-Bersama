@@ -18,8 +18,8 @@ class ViewAdminController extends Controller
     {
         return view('pages.admin.paket');
     }
-    public function coba1()
-    {
-        return view('pages.admin.coba');
-    }
+    // public function coba1()
+    // {
+    //     return view('pages.admin.member.datamember');
+    // }
 }

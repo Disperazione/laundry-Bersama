@@ -3,7 +3,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="">
-          <img src="assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="{{asset('img/brand/blue.png')}}" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -18,9 +18,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('/admin/coba') }}">
+              <a class="nav-link" href="{{ url('/admin/member/index') }}">
                 <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Tambah Data</span>
+                <span class="nav-link-text">Data Member</span>
               </a>
             </li>
             <li class="nav-item">
